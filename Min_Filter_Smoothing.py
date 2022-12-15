@@ -16,15 +16,9 @@ kernel=np.ones([3,3],int)
 
 for i in range(1,height-1):
     for j in range(1,width-1):
-        kernel[0][0]=paddedImg[i-1][j-1]
-        kernel[0][1]=paddedImg[i-1][j]
-        kernel[0][2]=paddedImg[i-1][j+1]
-        kernel[1][0]=paddedImg[i][j-1]
-        kernel[1][1]=paddedImg[i][j]
-        kernel[1][2]=paddedImg[i][j+1]
-        kernel[2][0]=paddedImg[i+1][j-1]
-        kernel[2][1]=paddedImg[i+1][j]
-        kernel[2][2]=paddedImg[i+1][j+1]
+        for k in range(3):
+            for l in range(3):
+                kernel[k][l]=paddedImg[i+k-1][j+l-1]
 
         img2[i-1][j-1]=kernel.min()
 

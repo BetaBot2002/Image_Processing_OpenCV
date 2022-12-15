@@ -1,0 +1,26 @@
+import cv2
+import numpy as np
+import matplotlib.pyplot as plt
+
+img=cv2.imread('Lowcont.png',0)
+
+height,width=img.shape[:2]
+
+gamma=1/0.25
+c=1
+
+def evaluatePixel(pixel):
+    global gamma,c
+    return (c*pixel)**gamma
+
+for i in range(height):
+    for j in  range(width):
+        img[i][j]=evaluatePixel(img[i][j])
+
+cv2.imshow('Power',img)
+
+histogram=cv2.calcHist([img],[0],None,[256],[0,255])
+plt.plot(histogram)
+plt.show()
+
+cv2.waitKey(0)

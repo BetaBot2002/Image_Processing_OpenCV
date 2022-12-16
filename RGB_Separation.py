@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 
-img=cv2.imread('Lowcont.png')
+img=cv2.imread('Taj.jpg')
 imgR=img.copy()
 imgG=img.copy()
 imgB=img.copy()

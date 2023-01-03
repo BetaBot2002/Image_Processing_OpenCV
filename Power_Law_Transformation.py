@@ -7,11 +7,11 @@ img=cv2.imread('Lowcont.png',0)
 height,width=img.shape[:2]
 
 gamma=1/0.25
-c=1
+c=255
 
 def evaluatePixel(pixel):
     global gamma,c
-    return (c*pixel)**gamma
+    return c*((pixel/255)**gamma)
 
 for i in range(height):
     for j in  range(width):

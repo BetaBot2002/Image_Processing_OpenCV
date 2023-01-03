@@ -17,8 +17,8 @@ def evaluatePixelDynamic(pixel):
 
 for i in range(height):
     for j in range(width):
-        #img[i][j]=evaluatePixelStatic(img[i][j])
-        img[i][j]=evaluatePixelDynamic(img[i][j])
+        img[i][j]=evaluatePixelStatic(img[i][j])
+        #img[i][j]=evaluatePixelDynamic(img[i][j])
 
 
 cv2.imshow('Log',img)

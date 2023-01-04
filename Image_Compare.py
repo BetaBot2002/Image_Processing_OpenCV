@@ -4,7 +4,7 @@ import numpy as np
 img1=cv2.imread('Demo.jpg')
 h,w,c=img1.shape
 
-img2=cv2.imread('Lowcont.png')
+img2=cv2.imread('Taj.jpg')
 img2=cv2.resize(img2,(w,h))
 
 new_img=img1-img2
@@ -23,7 +23,7 @@ if status:
     cv2.imshow('Identity',np.hstack((img1,img2)))
 else:
     print("Not Equal")
-    cv2.imshow('Not',new_img)
+    cv2.imshow('Not Equal',new_img)
 
 
 

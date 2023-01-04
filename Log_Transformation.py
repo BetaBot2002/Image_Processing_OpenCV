@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 import matplotlib.pyplot as plt
 
-img=cv2.imread('Lowcont.png',0)
+img=cv2.imread('Demo.jpg',0)
 histogram=cv2.calcHist([img],[0],None,[256],[0,255])
 
 plt.plot(histogram)
@@ -10,7 +10,7 @@ plt.show()
 height,width=img.shape[:2]
 
 def evaluatePixelStatic(pixel):
-    return np.log10(pixel+1)
+    return 255*np.log10(pixel/255+1)
 
 def evaluatePixelDynamic(pixel):
     return (255/np.log10(1+255))*np.log10(pixel+1)

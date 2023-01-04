@@ -1,7 +1,7 @@
 import cv2,numpy as np
 import matplotlib.pyplot as plt
 
-img=cv2.imread('Lowcont.png',0)
+img=cv2.imread('Demo.jpg',0)
 # cv2.imshow('old',img)
 # cv2.waitKey(0)
 

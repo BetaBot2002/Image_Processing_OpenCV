@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 
-img1=cv2.imread('Demo.jpg')
+img1=cv2.imread('RGB2.jpg')
 h,w,c=img1.shape
 
 img2=cv2.imread('Taj.jpg')
